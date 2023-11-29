@@ -1,0 +1,409 @@
+/* 字型 */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800;900&display=swap');
+
+/* 基本樣式設定 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif; /* 設定字型 */
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: 0.9;
+}
+
+p {
+  margin: 0;
+  font-
+}
+
+ul,
+li {
+  list-style-type: none; /* 拿掉前方圈圈 */
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none; /* 拿掉底線 */
+  color: black;
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  opacity: 0.9;
+  display: grid;
+  z-index: 999;
+  grid-template-columns: repeat(5, 1fr);
+  opacity: 0.9;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.brand {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/5;
+  grid-gap: 0.5rem;
+}
+
+.brand-img {
+  width: 35px;
+  height: 35px;
+}
+
+.brand-title {
+  font-weight: 700;
+}
+
+sup {
+  font-size: 0.7rem;
+}
+
+.nav {
+  display: none;
+}
+
+.nav-link {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo {
+  display: grid;
+  grid-auto-flow:column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 5/6;
+  grid-gap: 1.2rem;
+  margin-right: 20px;
+}
+
+ .fa-magnifying-glass {
+  position: absolute;
+  left: 10px;
+}
+
+/* selection */
+.selection-wrapper {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.selection-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.selection-option {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 25px 5px 0 5px;
+}
+
+.select {
+  background: white;
+  width: 45%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #AAAAAA;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding: 0 10px 0 15px;
+  cursor: pointer;
+}
+
+/* product */
+.product-wrapper {
+  padding-top: 15px;
+  margin: 0 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.product-clothes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 5px 20px 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  z-index: 2;
+}
+
+.product-img {
+  position: relative;
+}
+
+.default-img,
+.real-img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1; /* 維持 1:1 讓照片保持正方形 */
+  transition: opacity 0.3s ease-out;
+}
+
+.real-img {
+  position: absolute; /* 在父元素product-img設定relative */
+  top: 0px; /* 設定top為0px，使其貼齊父元素 */
+  opacity: 0; 
+}
+
+.default-img {
+  opacity: 1;
+}
+
+.product-clothes:hover .real-img {
+  opacity: 1;
+}
+
+.product-clothes:hover .default-img {
+  opacity: 0;
+}
+
+.product-title {
+  font-size: 0.8rem;
+}
+
+.product-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.sold-out {
+  font-weight: 400;
+}
+
+/* pagination */
+.pagination {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* banner */
+.banner-wrapper {
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14376/template.png");
+  background-size: cover; /* 背景圖片設定鋪滿 */
+  background-position: center; /* 背景圖片的位置水平置中 */
+  background-repeat: no-repeat; /* 背景圖案不重複。 */
+  
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.banner-text-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#form {
+  width: 85%;
+  background: white;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 20px 0;
+}
+
+.input {
+  all: unset;
+  background: white;
+  width: 53%;
+  height: 25px;
+  padding: 10px;
+  border-radius: 25px 0 0 25px;
+  text-align: center;
+}
+
+.button {
+  all: unset;
+  background: black;  
+  width: 25%;
+  height: 25px;
+  padding: 10px;
+  border-radius: 0 25px 25px 0;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.banner-text-policy {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.text-line {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background: #f0f0f0;
+  text-align: center;
+  font-size: 0.8em;
+  height: 35px;
+}
+
+/* breakpoint: 600px */
+@media screen and (min-width: 600px) {
+  
+  /* selection */
+  .selection-title {
+    font-size: 1.7rem;
+  }
+  
+  .selection-option {
+    justify-content: center;
+  }
+  
+  .select {
+    width: 25%;
+    margin: 5px; 
+  }
+  
+  /* product */
+  .product-wrapper { 
+    top: 220px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* banner */
+  #form {
+    width: 50%;
+  }
+}
+
+/* breakpoint: 960px */
+@media screen and (min-width: 960px) {
+  
+  /* header */
+  header {
+   grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .brand {
+    justify-content: start;
+    grid-column: 1/2;
+    margin-left: 15px;
+  }
+  
+  .brand-img {
+   width: 50px;
+   height: 50px;
+  }
+  
+  .brand-title {
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  
+  .nav {
+    display: grid;
+    grid-column: 2/3;
+  }
+  
+  .nav-list {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    margin-left: 80px;
+    grid-gap: 1.2rem;
+  }
+  
+  .logo {
+    grid-column: 3/4;
+    justify-content: end;
+    margin-right: 30px;
+  }
+  
+  .fa-magnifying-glass {
+    position: static; /* 將其他定位特性取消，回到最原始的狀態 */
+  }
+  
+  /* select */
+  .select {
+    width: 15%;
+  }
+  
+  /* product */
+  .product-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 20px;
+  }
+  
+  /* banner */
+  .banner-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    
+  }
+  
+  .banner-text-title {
+    font-size: 1.1rem;
+  }
+  
+  #form {
+    width: 45%;
+  }
+}
